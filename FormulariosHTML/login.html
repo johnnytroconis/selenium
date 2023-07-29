@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Automatizado</title>
+</head>
+<body>
+    <script language="JavaScript">
+        function limpiar(){
+            document.getElementById("control").value = document.getElementById("control").value+'\n'+document.getElementById("login").value+' - '+document.getElementById("pass").value
+            document.getElementById("login").value="";
+            document.getElementById("pass").value="";
+        }
+    </script>
+    <form>
+        <p>USER: <input type="text" name="login" id="login"></p>
+        <p>PASSWORD <input type="password" name="pwd" id="pass"></p>
+        <input type="button" onclick="limpiar()" value="Acceder" id="acceso">
+        <textarea id="control" name="cargas" rows="4" cols="50">Registros procesados
+        </textarea>
+    </form>
+</body>
+</html>
