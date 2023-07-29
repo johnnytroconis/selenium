@@ -5,6 +5,9 @@ import time
 
 service = Service(executable_path='c:\cdDriver\chromedriver')
 options = webdriver.ChromeOptions()
+
+options.add_experimental_option("excludeSwitches",['enable-automation'])
+
 driver = webdriver.Chrome(service=service, options=options)
 
 driver.get("file:///C:/Proyecto/FormulariosHTML/login.html")
